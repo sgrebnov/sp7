@@ -69,5 +69,6 @@ function imageResponse(res, data) {
   res.status(200).send(new Buffer(data, 'binary'));
 }
 
+var port = process.env.PORT || 3000;
 
-http.listen(80, () => console.log('listening on *:80'));
+http.listen(port, () => console.log('listening on *:' + port));
